@@ -1,3 +1,3 @@
 class Store < ActiveRecord::Base
-	validates :name, presence: true
+	validates :name, :country, presence: true
 end
