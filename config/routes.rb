@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  resources :stores
+  root to: 'products#index'
+
+  resources :products, only: [:index]
+  resources :stores do
+    resources :products
+  end
 end
