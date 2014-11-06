@@ -1,0 +1,8 @@
+<div>
+	<%= link_to product.name, store_product_path(product.store, product) %>
+	<%= product.price %>
+	<% if @store != nil %>
+		<%= product.description %>
+	<% end %>
+	<%= image_tag product.photo.url(:medium) %>
+</div>
