@@ -4,14 +4,7 @@
 <%= @store.email %>
 <%= @store.phone %>
 
-<% @store.products.each do |product| %>
-	<div>
-		<%= product.name %>
-		<%= product.price %>
-		<%= product.description %>
-		<%= image_tag product.photo.url(:medium) %>
-	</div>
-<% end %>
+<%= render @store.products %>
 
 <%= link_to 'Delete Store', store_path(@store), 
 										data: {confirm: "Are You Sure You Want To Delete This Store?",

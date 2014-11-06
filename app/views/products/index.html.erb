@@ -1,8 +1,1 @@
-<% @products.each do |product| %>
-	<div>
-		<%= product.name %>
-		<%= product.price %>
-		<%= product.description %>
-		<%= image_tag product.photo.url(:medium) %>
-	</div>
-<% end %>
+<%= render @products %>
