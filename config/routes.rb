@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index]
   resources :stores do
-    resources :products
+    resources :products, except: [:index]
   end
 end
