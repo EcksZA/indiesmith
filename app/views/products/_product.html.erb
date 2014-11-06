@@ -1,6 +1,6 @@
 <div>
 	<%= link_to product.name, store_product_path(product.store, product) %>
-	<%= product.price %>
+	<%= number_to_currency(product.price) %>
 	<% if @store != nil %>
 		<%= product.description %>
 	<% end %>
