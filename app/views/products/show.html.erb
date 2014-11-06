@@ -1,0 +1,9 @@
+<%= @product.name %>
+<%= @product.price %>
+<%= @product.description %>
+
+<%= link_to 'Delete Product', store_product_path(@store, @product), data: {
+														confirm: 'Are You Sure You Want To Delete This Product?',
+														method: 'delete'
+}
+%>
