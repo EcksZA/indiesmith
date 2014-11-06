@@ -5,6 +5,8 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'rmagick'
+gem 'paperclip'
 
 group :development do
   gem 'better_errors'
