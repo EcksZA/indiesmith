@@ -3,5 +3,7 @@ class Store < ActiveRecord::Base
 	validates :contact_email, :phone, presence: true
 	validates :email, presence: true
 
+	has_secure_password
+
 	has_many :products
 end
