@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'rmagick'
 gem 'paperclip'
+gem 'remotipart'
 
 group :development do
   gem 'better_errors'
