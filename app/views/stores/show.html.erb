@@ -4,6 +4,14 @@
 <%= @store.email %>
 <%= @store.phone %>
 
+<% @store.products.each do |product| %>
+	<div>
+		<%= product.name %>
+		<%= product.price %>
+		<%= product.description %>
+	</div>
+<% end %>
+
 <%= link_to 'Delete Store', store_path(@store), 
 										data: {confirm: "Are You Sure You Want To Delete This Store?",
 														method: 'delete'
