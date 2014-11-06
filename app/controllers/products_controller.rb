@@ -16,6 +16,11 @@ class ProductsController < ApplicationController
 	def create
 		@store = Store.find(params[:store_id])
 		@product = Product.new(product_params)
+		if @product.save
+			redirect_to store_product_path(@store, @product)
+		else
+			render 'new'
+		end
 	end
 
 	def edit
@@ -26,7 +31,7 @@ class ProductsController < ApplicationController
 	def update
 		@store = Store.find(params[:store_id])
 		@product = Product.find(params[:id])
-		if @product.update(user_params)
+		if @product.update(product_params)
 			redirect_to store_product_path(@store, @product)
 		else
 			render 'edit'
@@ -42,6 +47,6 @@ class ProductsController < ApplicationController
 
 private
 	def product_params
-		params.require(:product).permit(:name, :description. :price, :store_id)
+		params.require(:product).permit(:name, :description, :price, :store_id)
 	end
 end
