@@ -14,6 +14,7 @@ class StoresController < ApplicationController
 	def create
 		@store = Store.new(store_params)
 		if @store.save
+			session[:store_id] = @store.id
 			redirect_to store_path(@store)
 		else
 			render 'new'
